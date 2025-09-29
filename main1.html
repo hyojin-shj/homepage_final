@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!--
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="js/hj.js"></script>
+-->
+    <script>
+        //메뉴
+    $(function(){
+        
+        $(".navi>li").hover(function(){
+            $(this).find(".submenu").stop().slideDown();
+        },function(){
+            $(this).find(".submenu").stop().slideUp();
+        });
+        //css, atrr
+        $(".notice").mouseover(function(){
+            $("#op1").css("opacity", "0.7");
+                    });
+        $(".notice").mouseout(function(){
+            $("#op1").css("opacity", "1.0");
+        })
+        $(".banner1").mouseover(function(){
+            $("#op2").attr("src","image/plane-pork-belly-7586802_1280.jpg");
+        });
+        $(".banner1").mouseout(function(){
+            $("#op2").attr("src","image/kimchi-7259268_1280.jpg");
+        });
+        $(".banner2").mouseenter(function(){
+            $("#op3").fadeIn("slow");
+        });
+        $(".banner2").mouseleave(function(){
+            $("#op3").fadeOut("slow");
+        });
+        //이미지 슬라이드
+        //유형1
+        $(".slider div:gt(0)").hide();
+        setInterval(function(){
+            $(".slider div:first-child").fadeOut(300)
+            .next("div").fadeIn(300)
+            .end().appendTo(".slider");},3000);
+        //유형2
+//        var c=0;
+//        var s;
+//        setInterval(function(){
+//            if(c<2)
+//                {c++;}
+//            else
+//                {c=0;}
+//            s=c*(-500)+"px";
+//            $(".ibox").animate({top:s});
+//        },3000);
+        //유형3
+//        var c=0;
+//        var s;
+//        setInterval(function(){
+//            if(c<2)
+//                {c++;}
+//            else
+//                {c=0;}
+//            s=c*(-2000)+"px";
+//            $(".ibox").animate({left:s}, 400);
+//        },3000);
+        //유형4
+//        var current=0;
+//        setInterval(function(){
+//                var next=(current+1) % 3;
+//                $(".slider").find("div").eq(current).fadeOut();
+//                $(".slider").find("div").eq(next).fadeIn();
+//                current=next;
+//            },3000);
+//        })
+    });//끝
+    </script>
+    
+</head>
+
+<body>
+        <div class="slider">
+        <div class="ibox"><img src="image/pic3.jpg" alt=""></div>
+        <div class="ibox"><img src="image/pic1.jpg" alt=""></div>
+        <div class="ibox" ><img src="image/pic4.jpeg" alt=""></div>
+    </div> 
+        <div class="contents">
+            <div class="notice">
+                <img src="image/samgyetang-7528024_1280.jpg" alt="" id="op1"width="100%" height="300px">
+            </div>
+            <div class="banner1">
+                <img src="image/kimchi-7259268_1280.jpg" alt="" id="op2"width="100%" height="300px">
+            </div>
+            <div class="banner2">
+                <img src="image/plane-pork-belly-7586802_1280.jpg" alt="" id="op3"width="100%" height="300px" style="display:none;position:relative;">
+            </div>
+        </div>
+        <div class="prod">
+            <h1>신상품 목록</h1>
+            <ul class="prod-list">
+                <li>
+                    <img src="image/kochujang-934742_1280.jpg" alt=""width="300px" height="200px">
+                    <div class="caption">
+                        <h1> 상품1</h1>
+                        <p> 고추장</p>
+                        <p>가격 10,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="image/miso-7593901_1280.jpg" alt=""width="300px" height="200px">
+                    <div class="caption">
+                        <h1> 상품2</h1>
+                        <p> 된장</p>
+                        <p>가격 12,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="image/restaurant-4710464_1280.jpg" alt=""width="300px" height="200px">
+                    <div class="caption">
+                        <h1> 상품3</h1>
+                        <p> 간장</p>
+                        <p>가격 8,000원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <div style="clear:both;"></div>
+            <div class="photo">
+                <div class="p1"><img src="image/orange-2117899_1280.png" alt=""width="300px" height="200px"></div>
+                <div class="p2"><img src="image/orange-2117899_1280.png" alt=""width="300px" height="200px"></div>
+                <div class="p3"><img src="image/orange-2117899_1280.png" alt=""width="300px" height="200px"></div>
+            </div> 
+    
+</body>
+</html>

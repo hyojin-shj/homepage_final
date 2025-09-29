@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            font-weight: bold; 
+        }
+        body{
+            background-image: url(image/background.jpg);
+            background-size: cover;
+        }
+        #info{
+            width:600px;
+            margin:auto;
+            margin-top: 100px;
+            background-color: darkmagenta;
+            padding:40px;
+            box-shadow: 10px 10px 20px gray;
+            opacity: 0.8;
+        }
+        input[type=submit]{
+            margin-left:250px;
+            margin-top:20px;
+        }
+        input[type=reset]{
+            margin-top:10px;
+            
+        }
+        input{
+            border-radius:10px;
+                height:20px;
+        }
+        fieldset{
+            line-height:30px;
+            background-color:azure;
+            
+        }
+        #check-id, #check-pw{
+            display:inline;
+        }
+    </style>
+    <script>
+    function idcheck(){
+        var id=document.getElementById("user-id").value;
+        if(id!="admin"){
+            document.getElementById("check-id").innerHTML="잘못된 아이디입니다.";
+            document.getElementById("check-id").style.color="red";
+        }
+        if(id=="admin"){
+            document.getElementById("check-id").innerHTML="맞는 아이디입니다.";
+            document.getElementById("check-id").style.color="green";
+        }
+    }
+        function pwcheck(){
+            
+        var pwd1=document.getElementById("pwd1").value;
+        var pwd2=document.getElementById("pwd2").value;
+        if(pwd1!=pwd2){
+            document.getElementById("check-pw").innerHTML="비밀번호가 일치하지 않습니다.";
+            document.getElementById("check-pw").style.color="red";
+        }
+        if (pwd1==pwd2){
+            document.getElementById("check-pw").innerHTML="비밀번호가 일치합니다.";
+            document.getElementById("check-pw").style.color="green";
+        }
+        }
+        function f(){
+    var id = document.getElementById("user-id").value;
+    var pwd1 = document.getElementById("pwd1").value;
+
+    if(id === "admin" && pwd1 === "1234"){
+        alert("가입이 완료되었습니다.");
+        return false;
+    } else {
+        alert("아이디 또는 비밀번호가 틀렸습니다.");
+        return false;
+    }
+}
+        function c(){
+           document.getElementById("check-id").innerHTML=""
+           document.getElementById("check-id").innerHTML=""
+        }
+    </script>
+</head>
+<body>
+   <div id="info">
+    <form action="" method="post" name="ff" onsubmit="f();">
+    <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+        <li>
+            <label for="user-id">아이디</label>
+            <input type="text" id="user-id">
+            <input type="button" onclick="idcheck();return false;" value="check">
+            <div id="check-id"></div>
+        </li>
+        <li>
+           <label for="pwd1">비밀번호</label> 
+           <input type="password" id="pwd1">
+           <input type="button" onclick="pwcheck();return false;" value="password">
+            <div id="check-pw"></div>
+        </li>
+        <li>
+            <label for="pwd2">비밀번호 확인</label>
+            <input type="password" id="pwd2">
+        </li>
+        </ul>
+    </fieldset>
+        
+        <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+        <li>
+            <label for="user-id">이름</label>
+            <input type="text" id="user-id">
+            <input type="button" onclick="idcheck();return fasle;">
+            <div id="check-id"></div>
+        </li>
+        <li>
+           <label for="mail">메일 주소</label> 
+           <input type="email" id="mail">
+        </li>
+        <li>
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone">
+        </li>
+        <li>
+            <label for="page">블로그/홈페이지</label>
+            <input type="url" id="page">
+        </li>     
+        </ul>
+    </fieldset>
+    
+    <input type="submit"value="가입하기">
+    <input type="reset" value="취소" onclick="c()">
+    </form> </div>
+</body>
+</html>

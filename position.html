@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap');
+        *{
+            margin:0;
+        }
+        body,html{
+            height:100%;
+            font-family: sans-serif;
+                
+        }
+        #img1{
+            background-image:url("image/background.jpg")
+        }
+         #img2{
+            background-image:url("image/lake.jpg")
+        }
+        #img3{
+            background-image:url("image/sea.jpg")
+        }
+        #img4{
+            background-image:url("image/sea2.jpg")
+        }
+        #img5{
+            background-image:url("image/sky.jpg")}
+        #img6{
+            background-image:url("image/background.jpg")
+        }
+        .bg-img{
+            height:50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .bg-text{
+            z-index: 100;
+            background-color: rgba(0,0,0,0.5);
+            font-size:80px;
+            width:600px;
+            text-align: center;
+            height:230px;
+            font-weight: bold;
+            border: 20px solid white;
+            position:fixed;
+            top: 40%;
+            left:30%;
+            color:#fff;
+            text-shadow: 5px 5px 5px skyblue, 0px 0px 40px yellow;
+            font-family: "Nanum Brush Script", cursive;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="img1" class="bg-img"></div>
+    <div id="img2" class="bg-img"></div>
+    <div id="img3" class="bg-img"></div>
+    <div id="img4" class="bg-img"></div>
+    <div id="img5" class="bg-img"></div>
+    <div id="img6" class="bg-img"></div>
+    <div id="txt" class="bg-text">Welcome to HOMEPAGE</div>
+</body>
+</html>

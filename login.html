@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input[type="text"], input[type ="password"]{
+            width:73%;
+            margin:10px;
+/*            margin-bottom: 10px;*/
+            font-size: 30px;
+            padding:15px;
+        }
+        input[type="submit"]{
+            width:100%;
+            height:100%;
+            padding: 15px 0 15px 15px;
+            background-color: darkred;
+            margin-bottom:20px;
+            font-family:"돋움체";
+            font-size:30px;
+            color:#fff;
+            margin-top:13px;
+        
+        }
+        input[type="submit"]:hover{
+            background-color: aqua;
+            color:black;
+            
+        }
+        .container{
+            margin:0 auto;
+            width:600px;
+            background-color: #ccffff;
+            text-align: center;
+            position:absolute;
+            top:100px;
+            left:50%;
+            transform: translate(-50%,0);
+        }
+        body{
+            background-image: url(image/sea.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #login-left{
+            float:left;
+            width:60%;
+            margin-left:20px;
+        }
+        #login-right{
+            float:right;
+            width:25%;
+            height:150px;
+            margin-right:40px;
+        }
+    </style>
+    <script>
+    function f(){
+        var reg = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[#?!@$^&*-])[A-Za-z\d#?!@$^&*-]{7,12}$/;
+        var idd=document.getElementById("id").value;
+        var pw=document.getElementById("pw").value;
+        
+        if(idd=="")
+            {
+                alert("아이디를 입력하세요")
+                idd.focus();
+                return false;
+            }
+        else if(!reg.test(idd)){
+            alert("아이디는 7~12자리로 지정하고 \n 특수문자가 포함되어야합니다");
+            return false;
+        }
+        else if(pw=="")
+            {
+                alert("비밀번호를 입력하세요")
+                pw.focus();
+                return false;
+            }
+        else if(idd!="admin12@" || pw!="1234"){
+            alert("아이디와 비밀번호가 일치하지 않습니다.")
+            id="";
+                idd.focus();
+                return false;
+        }
+        else{
+            alert("admin님 환영합니다.");
+            return false;
+        }
+        
+    }
+    </script>
+</head>
+<body>
+   <div class="container">
+   <br>
+<!--    <img src="image/summer.jpeg" alt="여름" height="80" width="80">-->
+    <form action="" method= "get" name ="fa" onsubmit="f();return true;">
+        <h1>일반 로그인</h1>
+        <div id ="login-left">
+        <input type="text" name ="id" id="id" placeholder="아이디"><br>
+        <input type="password" name=pw id="pw" placeholder="비밀번호"><br></div>
+        <div id="login-right">
+        <input type="submit" value="로그인"></div>
+    </form></div>
+</body>
+</html>

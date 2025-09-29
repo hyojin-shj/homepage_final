@@ -1,0 +1,260 @@
+*{margin: 0;}
+header{
+   width: 100%;
+    height : 100px;
+    background-color: #efe8da;
+}
+nav{
+   width: 100%;
+    height : 50px;
+    background-color:#F8B3A4 ;
+    position:relative;
+    z-index: 100;}
+a{
+    text-decoration: none;
+    background-color: #F8B3A4;
+}
+.navi{
+    margin-left:20%;
+}
+.navi>li{
+    display:block;
+    float:left;
+    list-style-type: none;
+    width:200px;
+    height: 50px;
+    text-align: center;
+}
+.navi>li>a{
+    list-style: none;
+    display:block;
+    color:#A26B7F;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+.navi>li:hover{
+    position:relative;
+    color:#000;
+    background-color: darkgray;
+}
+.prod-list{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.prod{margin-left: 230px;}
+.prod-list li{
+    position: relative;
+    float: left;
+    padding: 0;
+    margin: 30px;
+    overflow: hidden;
+}
+.prod-list img{
+    margin: 0;
+    padding: 0;
+    float: left;
+    z-index: 5px;
+}
+.prod-list .caption{
+    position:absolute;
+    top:200px;
+    width:300px;
+    height:200px;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    z-index: 10;
+}
+.prod-list li:hover .caption{
+    opacity: 1;
+    transform: translateY(-200px);
+}
+.prod-list.caption h1, .prod-list .caption p{
+    padding-top: 20px;
+    color:#fff;
+    text-align: center;
+}
+/*이미지변형*/
+.photo{
+    margin-left: 300px;
+}
+.p1, .p2, .p3{
+    float:left;
+    margin: 10px;
+    overflow: hidden;
+}
+.p1 img:hover{
+    transform: scale(1.5);
+    transition: 2s ease-in;
+}
+.p2 {
+    animation: rotate 1.5s infinite;
+}
+ @keyframes rotate{
+    form{transform: perspective(250px) rotateX(0deg) rotateY(0deg)}
+    50%{transform: perspective(250px) rotateX(0deg) rotateY(-180deg)}
+    to{transform: perspective(250px) rotateX(0deg) rotateY(-365deg)} 
+}
+.p3:hover{
+    opacity: 0.5;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+    width:200px;
+    height:35px;
+  z-index: 2000;
+}
+.submenu>li{
+    list-style: none;
+    z-index:100;
+    position:relative;
+    width:200px;
+    height:35px;
+    background-color: #fff;
+/*    list-style-type: none;*/
+    margin-left: -40px;
+    
+}
+.submenu>li>a{
+    line-height: 35px;  
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff;
+    text-align: center;
+}
+.submenu>li:hover{
+    background-color: dimgray;
+}
+
+section{
+   width: 100%;
+    height : 1000px;
+    background-color: #FCDAB9;
+}
+footer{
+    width: 100%;
+    height : 100px;
+    background-color: #efe8da;
+}
+footer ul{
+    list-style: none;
+    text-align: center;
+}
+.imgslide{
+     width: 100%;
+    height : 300px;
+    background-color: red;
+    float : left;
+}
+.notice{
+    width: 33.3%;
+    height : 300px;
+    background-color: #F8B3A4
+;
+    float : left;
+}
+.banner1{
+    width: 33.3%;
+    height : 300px;
+    background-color: #F8B3A4
+;
+    float : left;
+}
+.banner2{
+    width: 33.3%;
+    height : 300px;
+    background-color: #F8B3A4
+;
+    float : left;
+}
+.logo{
+    position: relative;
+    float:left;
+    margin-left: 30px;
+    
+}
+#s-menu{
+    position: absolute;
+    top:50px;
+    right: 10px;
+    float: right;
+}
+.slider{
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+    float:left;
+}
+.ibox{
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+    float:left;
+}
+.ibox>img{
+    width: 100%;
+    position: absolute;
+    transition: all 2s;
+}
+/*
+.slider div {
+  display: none;
+}
+.slider div:first-child {
+  display: block;
+}
+*/
+/*모달*/
+#modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 200;
+    display: none;
+}
+#modal.active{
+    display: block;
+}
+.modal-up{
+    width:800px;
+    height:500px;
+    position: fixed;
+    left: 20%;
+    top:20%;
+    background-color: #fff;
+}
+.uptitle{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    line-height: 16px;
+}
+.upbody{
+    text-align: center;
+    line-height: 30px;
+    padding: 30px;
+}
+#btn{
+    width:80px; height:30px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 3px;
+    background-color:#5e1742;
+     position: absolute;
+    left: 350px;
+    bottom: 30px;
+    line-height: 30px;
+}
