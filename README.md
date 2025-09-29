@@ -1,6 +1,8 @@
 # final_Homepage 웹사이트 제작
 html, css의 기능 실습을 위한 웹사이트 제작
 
+🌐 링크: https://hyojin-shj.github.io/homepage_final/
+
 ## 페이지별 구현 기능
 ### 1. 메인 페이지
 setInterval을 이용하여 메인페이지 이미지 전환 구현
